@@ -26,7 +26,16 @@ Restart=on-failure
 WantedBy=multi-user.target
 ```
 
-# 软件安装
+终端命令
+``` sh
+$ systemctl daemon-reload  # 重新加载 systemd
+$ systemctl enable clash   # 把clash加入开机启动
+$ systemctl start clash    # 当前立即启动clash
+$ systemctl status clash   # 查看clash运行情况
+$ journalctl -xe           # 打印clash日志
+```
+
+## 软件安装
 
 ```sh
 $ sudo apt install <软件名>  # 安装软件

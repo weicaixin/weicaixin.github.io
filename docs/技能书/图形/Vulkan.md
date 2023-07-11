@@ -16,7 +16,7 @@
 
 https://stackoverflow.com/questions/39557141/what-is-the-difference-between-framebuffer-and-image-in-vulkan/39559418#39559418  
 
-![alt](./vulkan_render_target.png)
+![alt](./assert/vulkan_render_target.png)
 
 ## API
 **Context**  

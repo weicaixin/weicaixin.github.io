@@ -27,6 +27,22 @@ function sidebarList() {
   }
 }
 
+function sidebarItems() {
+  const srcDir = dirTree(srcPath, {
+    extensions: /\.md$/,
+    normalizePath: true,
+  });
+
+  return [
+    {
+      text: title == undefined ? srcDir.name : title,
+      collapsible: true,
+      collapsed: true,
+      items: toSidebarOption(srcDir.children),
+    },
+  ];
+}
+
 // function toSidebarOption(tree = []) {
 //   if (!Array.isArray(tree)) return [];
 

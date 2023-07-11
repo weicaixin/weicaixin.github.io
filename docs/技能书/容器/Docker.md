@@ -64,12 +64,13 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugi
     ```dockerfile
     FROM docker.io/dreamacro/clash    # 以一个镜像为基础构建
     COPY /clash /root/.config/clash/  # 构建过程中执行拷贝动作
+    ADD packages/*.tar.gz /opt/packages/ # 构建过程中，将压缩包解压到指定路径
     ```
-
+    
 2. 执行构建：
     ```sh
     $ cd <Dockerfile路径>  # 移动到Dockerfile所在路径
-    $ docker build -t <imageName> .
+    $ docker build -t <imageName> . # --force-rm强制覆盖已有的
     ```
 
 > 可以去 https://hub.docker.com 搜寻需要的镜像。
@@ -129,7 +130,7 @@ Docker Compose可以用写好的配置文件启动容器，可以替代命令行
 2. 启动容器
     ```sh
     $ cd <docker-compose.yml所在文件夹>
-    $ docker compose up -d
+    $ docker compose up -d  # -d在后台执行
     ```
 
 
