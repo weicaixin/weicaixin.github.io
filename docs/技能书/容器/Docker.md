@@ -83,15 +83,15 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugi
 
 ### 基本命令
 
-启动容器：`docker run --name <容器名> -p <主机端口:容器端口> -v <主机路径:容器路径> -dt <仓库名/镜像ID>`    *-d 后台运行, -t 带tty,  -p -v 可以有多个*
-只创建不启动：`docker create`
-列出容器：`docker ps -a`
-进入容器：`docker exec -it <容器ID> /bin/bash`    *进入后用exit命令退出容器*
-删除容器：`docker rm <容器ID>` 
-删除全部容器：`docker rm $(docker ps -aq)`
-关闭容器： `docker stop <容器ID>` 
-关闭全部容器：`docker stop $(docker ps -aq)`
-跟踪容器日志：`docker logs -f <容器ID> `
+启动容器：`docker run --name <容器名> -p <主机端口:容器端口> -v <主机路径:容器路径> -dt <仓库名/镜像ID>`    *-d 后台运行, -t 带tty,  -p -v 可以有多个*  
+只创建不启动：`docker create`  
+列出容器：`docker ps -a`  
+进入容器：`docker exec -it <容器ID> /bin/bash`    *进入后用exit命令退出容器*  
+删除容器：`docker rm <容器ID>`   
+删除全部容器：`docker rm $(docker ps -aq)`  
+关闭容器： `docker stop <容器ID>`   
+关闭全部容器：`docker stop $(docker ps -aq)`  
+跟踪容器日志：`docker logs -f <容器ID> `  
 
 ### 自启动
 
