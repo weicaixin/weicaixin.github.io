@@ -1,6 +1,6 @@
 # Docker
 
-Docker是一个单机容器运行管理工具。需要root权限执行。  用户将应用和应用需要的环境打包为一个镜像，用镜像生成容器来运行应用。每个容器都是一个包含虚拟环境的进程，不同应用运行在不同容器进程中，依赖着自己的运行环境，避免了运行环境冲突并提高了部署和运维效率。
+Docker是一个单机容器运行管理工具。用户将应用和应用需要的环境打包为一个镜像，用镜像生成容器来运行应用。每个容器都是一个包含虚拟环境的进程，不同应用运行在不同容器进程中，依赖着自己的运行环境，避免了运行环境冲突并提高了部署和运维效率。注意Docker需要root权限执行。
 
 ## 安装
 
@@ -42,6 +42,14 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugi
    在虚拟机内按照Linux下安装的方式安装Docker即可。
 
 > 也可以用Docker官方推荐的Docker Desktop，启动停止都很慢，有时候还会占用100%。
+
+
+### 执行权限
+Docker一般需要root权限执行，可以将Docker加入用户组，并加上root权限。
+``` sh
+$ sudo groupadd docker
+$ sudo usermod -aG docker $USER
+```
 
 ## 镜像
 
